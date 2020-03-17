@@ -136,7 +136,7 @@ func (c *DNSHandlerConfig) FillDefaultedIntProperty(target **int, def int, prop 
 		}
 		i, err := strconv.Atoi(value)
 		if err != nil {
-			return fmt.Errorf("property %s must be an int value: %s", err)
+			return fmt.Errorf("property %s must be an int value: %s", prop, err)
 		}
 		*target = &i
 	} else {
